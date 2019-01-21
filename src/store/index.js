@@ -13,21 +13,16 @@ configure({
 });
 
 class Store {
-    playersNames;
-    score;
-    currentGame;
-
-    constructor() {
-        this.playersNames = playersNamesDefault;
-        this.score = {
-            [this.playersNames[0]]: 0,
-            [this.playersNames[1]]: 0,
-        };
-        this.currentGame = {
-            [this.playersNames[0]]: {},
-            [this.playersNames[1]]: {},
-        };
-    }
+    playersNames = playersNamesDefault;
+    score = {
+        [this.playersNames[0]]: 0,
+        [this.playersNames[1]]: 0,
+    };
+    currentGame = {
+        [this.playersNames[0]]: {},
+        [this.playersNames[1]]: {},
+    };
+    weapons = weapons;
 
     resetScore() {
         this.score = {
@@ -36,7 +31,7 @@ class Store {
         };
     }
     setPlayerWeapon(player, weapon) {
-        if (!player || !this.playersNames.includes(player) || !weapon || !weapons.includes(weapon)) {
+        if (!player || !this.playersNames.includes(player) || !weapon || !this.weapons.includes(weapon)) {
             throw noPlayerAndWeaponError;
         }
 
@@ -50,7 +45,7 @@ class Store {
         this.score[player]++;
     }
     setCurrentGameWinner(plays) {
-        if (!plays || plays.length !== 2 || !weapons.includes(plays[0]) || !weapons.includes(plays[1])) {
+        if (!plays || plays.length !== 2 || !this.weapons.includes(plays[0]) || !this.weapons.includes(plays[1])) {
             throw invalidPlays;
         }
 

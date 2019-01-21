@@ -1,0 +1,1315 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeaponsList should rendered correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <inject-WeaponsList-with-store
+    store={
+      Object {
+        "playersNames": Array [
+          "player1",
+          "player2",
+        ],
+        "setPlayerWeapon": [MockFunction],
+        "weapons": Array [
+          Object {
+            "name": "rock",
+            "winsAgainst": Array [
+              "scissors",
+            ],
+            Symbol(mobx administration): ObservableObjectAdministration$$1 {
+              "defaultEnhancer": [Function],
+              "keysAtom": Atom$$1 {
+                "diffValue": 0,
+                "isBeingObserved": false,
+                "isPendingUnobservation": false,
+                "lastAccessedBy": 0,
+                "lowestObserverState": 2,
+                "name": "ObservableObject@1.weapons[..].keys",
+                "observers": Set {},
+              },
+              "name": "ObservableObject@1.weapons[..]",
+              "pendingKeys": Map {
+                "$$typeof" => false,
+                "nodeType" => false,
+                "@@__IMMUTABLE_ITERABLE__@@" => false,
+                "@@__IMMUTABLE_RECORD__@@" => false,
+                "_isMockFunction" => false,
+                "toJSON" => false,
+              },
+              "proxy": [Circular],
+              "target": Object {
+                "name": "rock",
+                "winsAgainst": Array [
+                  "scissors",
+                ],
+                Symbol(mobx administration): [Circular],
+              },
+              "values": Map {
+                "name" => "rock",
+                "winsAgainst" => Array [
+                  "scissors",
+                ],
+              },
+            },
+          },
+          Object {
+            "name": "scissors",
+            "winsAgainst": Array [
+              "paper",
+            ],
+            Symbol(mobx administration): ObservableObjectAdministration$$1 {
+              "defaultEnhancer": [Function],
+              "keysAtom": Atom$$1 {
+                "diffValue": 0,
+                "isBeingObserved": false,
+                "isPendingUnobservation": false,
+                "lastAccessedBy": 0,
+                "lowestObserverState": 2,
+                "name": "ObservableObject@1.weapons[..].keys",
+                "observers": Set {},
+              },
+              "name": "ObservableObject@1.weapons[..]",
+              "pendingKeys": Map {
+                "$$typeof" => false,
+                "nodeType" => false,
+                "@@__IMMUTABLE_ITERABLE__@@" => false,
+                "@@__IMMUTABLE_RECORD__@@" => false,
+                "_isMockFunction" => false,
+                "toJSON" => false,
+              },
+              "proxy": [Circular],
+              "target": Object {
+                "name": "scissors",
+                "winsAgainst": Array [
+                  "paper",
+                ],
+                Symbol(mobx administration): [Circular],
+              },
+              "values": Map {
+                "name" => "scissors",
+                "winsAgainst" => Array [
+                  "paper",
+                ],
+              },
+            },
+          },
+          Object {
+            "name": "paper",
+            "winsAgainst": Array [
+              "rock",
+            ],
+            Symbol(mobx administration): ObservableObjectAdministration$$1 {
+              "defaultEnhancer": [Function],
+              "keysAtom": Atom$$1 {
+                "diffValue": 0,
+                "isBeingObserved": false,
+                "isPendingUnobservation": false,
+                "lastAccessedBy": 0,
+                "lowestObserverState": 2,
+                "name": "ObservableObject@1.weapons[..].keys",
+                "observers": Set {},
+              },
+              "name": "ObservableObject@1.weapons[..]",
+              "pendingKeys": Map {
+                "$$typeof" => false,
+                "nodeType" => false,
+                "@@__IMMUTABLE_ITERABLE__@@" => false,
+                "@@__IMMUTABLE_RECORD__@@" => false,
+                "_isMockFunction" => false,
+                "toJSON" => false,
+              },
+              "proxy": [Circular],
+              "target": Object {
+                "name": "paper",
+                "winsAgainst": Array [
+                  "rock",
+                ],
+                Symbol(mobx administration): [Circular],
+              },
+              "values": Map {
+                "name" => "paper",
+                "winsAgainst" => Array [
+                  "rock",
+                ],
+              },
+            },
+          },
+        ],
+        Symbol(mobx administration): ObservableObjectAdministration$$1 {
+          "defaultEnhancer": [Function],
+          "keysAtom": Atom$$1 {
+            "diffValue": 0,
+            "isBeingObserved": false,
+            "isPendingUnobservation": false,
+            "lastAccessedBy": 0,
+            "lowestObserverState": 2,
+            "name": "ObservableObject@1.keys",
+            "observers": Set {},
+          },
+          "name": "ObservableObject@1",
+          "pendingKeys": Map {
+            "$$typeof" => false,
+            "nodeType" => false,
+            "@@__IMMUTABLE_ITERABLE__@@" => false,
+            "@@__IMMUTABLE_RECORD__@@" => false,
+            "_isMockFunction" => false,
+            "toJSON" => false,
+          },
+          "proxy": [Circular],
+          "target": Object {
+            "playersNames": Array [
+              "player1",
+              "player2",
+            ],
+            "setPlayerWeapon": [MockFunction],
+            "weapons": Array [
+              Object {
+                "name": "rock",
+                "winsAgainst": Array [
+                  "scissors",
+                ],
+                Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                  "defaultEnhancer": [Function],
+                  "keysAtom": Atom$$1 {
+                    "diffValue": 0,
+                    "isBeingObserved": false,
+                    "isPendingUnobservation": false,
+                    "lastAccessedBy": 0,
+                    "lowestObserverState": 2,
+                    "name": "ObservableObject@1.weapons[..].keys",
+                    "observers": Set {},
+                  },
+                  "name": "ObservableObject@1.weapons[..]",
+                  "pendingKeys": Map {
+                    "$$typeof" => false,
+                    "nodeType" => false,
+                    "@@__IMMUTABLE_ITERABLE__@@" => false,
+                    "@@__IMMUTABLE_RECORD__@@" => false,
+                    "_isMockFunction" => false,
+                    "toJSON" => false,
+                  },
+                  "proxy": [Circular],
+                  "target": Object {
+                    "name": "rock",
+                    "winsAgainst": Array [
+                      "scissors",
+                    ],
+                    Symbol(mobx administration): [Circular],
+                  },
+                  "values": Map {
+                    "name" => "rock",
+                    "winsAgainst" => Array [
+                      "scissors",
+                    ],
+                  },
+                },
+              },
+              Object {
+                "name": "scissors",
+                "winsAgainst": Array [
+                  "paper",
+                ],
+                Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                  "defaultEnhancer": [Function],
+                  "keysAtom": Atom$$1 {
+                    "diffValue": 0,
+                    "isBeingObserved": false,
+                    "isPendingUnobservation": false,
+                    "lastAccessedBy": 0,
+                    "lowestObserverState": 2,
+                    "name": "ObservableObject@1.weapons[..].keys",
+                    "observers": Set {},
+                  },
+                  "name": "ObservableObject@1.weapons[..]",
+                  "pendingKeys": Map {
+                    "$$typeof" => false,
+                    "nodeType" => false,
+                    "@@__IMMUTABLE_ITERABLE__@@" => false,
+                    "@@__IMMUTABLE_RECORD__@@" => false,
+                    "_isMockFunction" => false,
+                    "toJSON" => false,
+                  },
+                  "proxy": [Circular],
+                  "target": Object {
+                    "name": "scissors",
+                    "winsAgainst": Array [
+                      "paper",
+                    ],
+                    Symbol(mobx administration): [Circular],
+                  },
+                  "values": Map {
+                    "name" => "scissors",
+                    "winsAgainst" => Array [
+                      "paper",
+                    ],
+                  },
+                },
+              },
+              Object {
+                "name": "paper",
+                "winsAgainst": Array [
+                  "rock",
+                ],
+                Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                  "defaultEnhancer": [Function],
+                  "keysAtom": Atom$$1 {
+                    "diffValue": 0,
+                    "isBeingObserved": false,
+                    "isPendingUnobservation": false,
+                    "lastAccessedBy": 0,
+                    "lowestObserverState": 2,
+                    "name": "ObservableObject@1.weapons[..].keys",
+                    "observers": Set {},
+                  },
+                  "name": "ObservableObject@1.weapons[..]",
+                  "pendingKeys": Map {
+                    "$$typeof" => false,
+                    "nodeType" => false,
+                    "@@__IMMUTABLE_ITERABLE__@@" => false,
+                    "@@__IMMUTABLE_RECORD__@@" => false,
+                    "_isMockFunction" => false,
+                    "toJSON" => false,
+                  },
+                  "proxy": [Circular],
+                  "target": Object {
+                    "name": "paper",
+                    "winsAgainst": Array [
+                      "rock",
+                    ],
+                    Symbol(mobx administration): [Circular],
+                  },
+                  "values": Map {
+                    "name" => "paper",
+                    "winsAgainst" => Array [
+                      "rock",
+                    ],
+                  },
+                },
+              },
+            ],
+            Symbol(mobx administration): [Circular],
+          },
+          "values": Map {
+            "playersNames" => Array [
+              "player1",
+              "player2",
+            ],
+            "weapons" => Array [
+              Object {
+                "name": "rock",
+                "winsAgainst": Array [
+                  "scissors",
+                ],
+                Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                  "defaultEnhancer": [Function],
+                  "keysAtom": Atom$$1 {
+                    "diffValue": 0,
+                    "isBeingObserved": false,
+                    "isPendingUnobservation": false,
+                    "lastAccessedBy": 0,
+                    "lowestObserverState": 2,
+                    "name": "ObservableObject@1.weapons[..].keys",
+                    "observers": Set {},
+                  },
+                  "name": "ObservableObject@1.weapons[..]",
+                  "pendingKeys": Map {
+                    "$$typeof" => false,
+                    "nodeType" => false,
+                    "@@__IMMUTABLE_ITERABLE__@@" => false,
+                    "@@__IMMUTABLE_RECORD__@@" => false,
+                    "_isMockFunction" => false,
+                    "toJSON" => false,
+                  },
+                  "proxy": [Circular],
+                  "target": Object {
+                    "name": "rock",
+                    "winsAgainst": Array [
+                      "scissors",
+                    ],
+                    Symbol(mobx administration): [Circular],
+                  },
+                  "values": Map {
+                    "name" => "rock",
+                    "winsAgainst" => Array [
+                      "scissors",
+                    ],
+                  },
+                },
+              },
+              Object {
+                "name": "scissors",
+                "winsAgainst": Array [
+                  "paper",
+                ],
+                Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                  "defaultEnhancer": [Function],
+                  "keysAtom": Atom$$1 {
+                    "diffValue": 0,
+                    "isBeingObserved": false,
+                    "isPendingUnobservation": false,
+                    "lastAccessedBy": 0,
+                    "lowestObserverState": 2,
+                    "name": "ObservableObject@1.weapons[..].keys",
+                    "observers": Set {},
+                  },
+                  "name": "ObservableObject@1.weapons[..]",
+                  "pendingKeys": Map {
+                    "$$typeof" => false,
+                    "nodeType" => false,
+                    "@@__IMMUTABLE_ITERABLE__@@" => false,
+                    "@@__IMMUTABLE_RECORD__@@" => false,
+                    "_isMockFunction" => false,
+                    "toJSON" => false,
+                  },
+                  "proxy": [Circular],
+                  "target": Object {
+                    "name": "scissors",
+                    "winsAgainst": Array [
+                      "paper",
+                    ],
+                    Symbol(mobx administration): [Circular],
+                  },
+                  "values": Map {
+                    "name" => "scissors",
+                    "winsAgainst" => Array [
+                      "paper",
+                    ],
+                  },
+                },
+              },
+              Object {
+                "name": "paper",
+                "winsAgainst": Array [
+                  "rock",
+                ],
+                Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                  "defaultEnhancer": [Function],
+                  "keysAtom": Atom$$1 {
+                    "diffValue": 0,
+                    "isBeingObserved": false,
+                    "isPendingUnobservation": false,
+                    "lastAccessedBy": 0,
+                    "lowestObserverState": 2,
+                    "name": "ObservableObject@1.weapons[..].keys",
+                    "observers": Set {},
+                  },
+                  "name": "ObservableObject@1.weapons[..]",
+                  "pendingKeys": Map {
+                    "$$typeof" => false,
+                    "nodeType" => false,
+                    "@@__IMMUTABLE_ITERABLE__@@" => false,
+                    "@@__IMMUTABLE_RECORD__@@" => false,
+                    "_isMockFunction" => false,
+                    "toJSON" => false,
+                  },
+                  "proxy": [Circular],
+                  "target": Object {
+                    "name": "paper",
+                    "winsAgainst": Array [
+                      "rock",
+                    ],
+                    Symbol(mobx administration): [Circular],
+                  },
+                  "values": Map {
+                    "name" => "paper",
+                    "winsAgainst" => Array [
+                      "rock",
+                    ],
+                  },
+                },
+              },
+            ],
+            "setPlayerWeapon" => [MockFunction],
+          },
+        },
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "store": Object {
+        "playersNames": Array [
+          "player1",
+          "player2",
+        ],
+        "setPlayerWeapon": [MockFunction],
+        "weapons": Array [
+          Object {
+            "name": "rock",
+            "winsAgainst": Array [
+              "scissors",
+            ],
+            Symbol(mobx administration): ObservableObjectAdministration$$1 {
+              "defaultEnhancer": [Function],
+              "keysAtom": Atom$$1 {
+                "diffValue": 0,
+                "isBeingObserved": false,
+                "isPendingUnobservation": false,
+                "lastAccessedBy": 0,
+                "lowestObserverState": 2,
+                "name": "ObservableObject@1.weapons[..].keys",
+                "observers": Set {},
+              },
+              "name": "ObservableObject@1.weapons[..]",
+              "pendingKeys": Map {
+                "$$typeof" => false,
+                "nodeType" => false,
+                "@@__IMMUTABLE_ITERABLE__@@" => false,
+                "@@__IMMUTABLE_RECORD__@@" => false,
+                "_isMockFunction" => false,
+                "toJSON" => false,
+              },
+              "proxy": [Circular],
+              "target": Object {
+                "name": "rock",
+                "winsAgainst": Array [
+                  "scissors",
+                ],
+                Symbol(mobx administration): [Circular],
+              },
+              "values": Map {
+                "name" => "rock",
+                "winsAgainst" => Array [
+                  "scissors",
+                ],
+              },
+            },
+          },
+          Object {
+            "name": "scissors",
+            "winsAgainst": Array [
+              "paper",
+            ],
+            Symbol(mobx administration): ObservableObjectAdministration$$1 {
+              "defaultEnhancer": [Function],
+              "keysAtom": Atom$$1 {
+                "diffValue": 0,
+                "isBeingObserved": false,
+                "isPendingUnobservation": false,
+                "lastAccessedBy": 0,
+                "lowestObserverState": 2,
+                "name": "ObservableObject@1.weapons[..].keys",
+                "observers": Set {},
+              },
+              "name": "ObservableObject@1.weapons[..]",
+              "pendingKeys": Map {
+                "$$typeof" => false,
+                "nodeType" => false,
+                "@@__IMMUTABLE_ITERABLE__@@" => false,
+                "@@__IMMUTABLE_RECORD__@@" => false,
+                "_isMockFunction" => false,
+                "toJSON" => false,
+              },
+              "proxy": [Circular],
+              "target": Object {
+                "name": "scissors",
+                "winsAgainst": Array [
+                  "paper",
+                ],
+                Symbol(mobx administration): [Circular],
+              },
+              "values": Map {
+                "name" => "scissors",
+                "winsAgainst" => Array [
+                  "paper",
+                ],
+              },
+            },
+          },
+          Object {
+            "name": "paper",
+            "winsAgainst": Array [
+              "rock",
+            ],
+            Symbol(mobx administration): ObservableObjectAdministration$$1 {
+              "defaultEnhancer": [Function],
+              "keysAtom": Atom$$1 {
+                "diffValue": 0,
+                "isBeingObserved": false,
+                "isPendingUnobservation": false,
+                "lastAccessedBy": 0,
+                "lowestObserverState": 2,
+                "name": "ObservableObject@1.weapons[..].keys",
+                "observers": Set {},
+              },
+              "name": "ObservableObject@1.weapons[..]",
+              "pendingKeys": Map {
+                "$$typeof" => false,
+                "nodeType" => false,
+                "@@__IMMUTABLE_ITERABLE__@@" => false,
+                "@@__IMMUTABLE_RECORD__@@" => false,
+                "_isMockFunction" => false,
+                "toJSON" => false,
+              },
+              "proxy": [Circular],
+              "target": Object {
+                "name": "paper",
+                "winsAgainst": Array [
+                  "rock",
+                ],
+                Symbol(mobx administration): [Circular],
+              },
+              "values": Map {
+                "name" => "paper",
+                "winsAgainst" => Array [
+                  "rock",
+                ],
+              },
+            },
+          },
+        ],
+        Symbol(mobx administration): ObservableObjectAdministration$$1 {
+          "defaultEnhancer": [Function],
+          "keysAtom": Atom$$1 {
+            "diffValue": 0,
+            "isBeingObserved": false,
+            "isPendingUnobservation": false,
+            "lastAccessedBy": 0,
+            "lowestObserverState": 2,
+            "name": "ObservableObject@1.keys",
+            "observers": Set {},
+          },
+          "name": "ObservableObject@1",
+          "pendingKeys": Map {
+            "$$typeof" => false,
+            "nodeType" => false,
+            "@@__IMMUTABLE_ITERABLE__@@" => false,
+            "@@__IMMUTABLE_RECORD__@@" => false,
+            "_isMockFunction" => false,
+            "toJSON" => false,
+          },
+          "proxy": [Circular],
+          "target": Object {
+            "playersNames": Array [
+              "player1",
+              "player2",
+            ],
+            "setPlayerWeapon": [MockFunction],
+            "weapons": Array [
+              Object {
+                "name": "rock",
+                "winsAgainst": Array [
+                  "scissors",
+                ],
+                Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                  "defaultEnhancer": [Function],
+                  "keysAtom": Atom$$1 {
+                    "diffValue": 0,
+                    "isBeingObserved": false,
+                    "isPendingUnobservation": false,
+                    "lastAccessedBy": 0,
+                    "lowestObserverState": 2,
+                    "name": "ObservableObject@1.weapons[..].keys",
+                    "observers": Set {},
+                  },
+                  "name": "ObservableObject@1.weapons[..]",
+                  "pendingKeys": Map {
+                    "$$typeof" => false,
+                    "nodeType" => false,
+                    "@@__IMMUTABLE_ITERABLE__@@" => false,
+                    "@@__IMMUTABLE_RECORD__@@" => false,
+                    "_isMockFunction" => false,
+                    "toJSON" => false,
+                  },
+                  "proxy": [Circular],
+                  "target": Object {
+                    "name": "rock",
+                    "winsAgainst": Array [
+                      "scissors",
+                    ],
+                    Symbol(mobx administration): [Circular],
+                  },
+                  "values": Map {
+                    "name" => "rock",
+                    "winsAgainst" => Array [
+                      "scissors",
+                    ],
+                  },
+                },
+              },
+              Object {
+                "name": "scissors",
+                "winsAgainst": Array [
+                  "paper",
+                ],
+                Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                  "defaultEnhancer": [Function],
+                  "keysAtom": Atom$$1 {
+                    "diffValue": 0,
+                    "isBeingObserved": false,
+                    "isPendingUnobservation": false,
+                    "lastAccessedBy": 0,
+                    "lowestObserverState": 2,
+                    "name": "ObservableObject@1.weapons[..].keys",
+                    "observers": Set {},
+                  },
+                  "name": "ObservableObject@1.weapons[..]",
+                  "pendingKeys": Map {
+                    "$$typeof" => false,
+                    "nodeType" => false,
+                    "@@__IMMUTABLE_ITERABLE__@@" => false,
+                    "@@__IMMUTABLE_RECORD__@@" => false,
+                    "_isMockFunction" => false,
+                    "toJSON" => false,
+                  },
+                  "proxy": [Circular],
+                  "target": Object {
+                    "name": "scissors",
+                    "winsAgainst": Array [
+                      "paper",
+                    ],
+                    Symbol(mobx administration): [Circular],
+                  },
+                  "values": Map {
+                    "name" => "scissors",
+                    "winsAgainst" => Array [
+                      "paper",
+                    ],
+                  },
+                },
+              },
+              Object {
+                "name": "paper",
+                "winsAgainst": Array [
+                  "rock",
+                ],
+                Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                  "defaultEnhancer": [Function],
+                  "keysAtom": Atom$$1 {
+                    "diffValue": 0,
+                    "isBeingObserved": false,
+                    "isPendingUnobservation": false,
+                    "lastAccessedBy": 0,
+                    "lowestObserverState": 2,
+                    "name": "ObservableObject@1.weapons[..].keys",
+                    "observers": Set {},
+                  },
+                  "name": "ObservableObject@1.weapons[..]",
+                  "pendingKeys": Map {
+                    "$$typeof" => false,
+                    "nodeType" => false,
+                    "@@__IMMUTABLE_ITERABLE__@@" => false,
+                    "@@__IMMUTABLE_RECORD__@@" => false,
+                    "_isMockFunction" => false,
+                    "toJSON" => false,
+                  },
+                  "proxy": [Circular],
+                  "target": Object {
+                    "name": "paper",
+                    "winsAgainst": Array [
+                      "rock",
+                    ],
+                    Symbol(mobx administration): [Circular],
+                  },
+                  "values": Map {
+                    "name" => "paper",
+                    "winsAgainst" => Array [
+                      "rock",
+                    ],
+                  },
+                },
+              },
+            ],
+            Symbol(mobx administration): [Circular],
+          },
+          "values": Map {
+            "playersNames" => Array [
+              "player1",
+              "player2",
+            ],
+            "weapons" => Array [
+              Object {
+                "name": "rock",
+                "winsAgainst": Array [
+                  "scissors",
+                ],
+                Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                  "defaultEnhancer": [Function],
+                  "keysAtom": Atom$$1 {
+                    "diffValue": 0,
+                    "isBeingObserved": false,
+                    "isPendingUnobservation": false,
+                    "lastAccessedBy": 0,
+                    "lowestObserverState": 2,
+                    "name": "ObservableObject@1.weapons[..].keys",
+                    "observers": Set {},
+                  },
+                  "name": "ObservableObject@1.weapons[..]",
+                  "pendingKeys": Map {
+                    "$$typeof" => false,
+                    "nodeType" => false,
+                    "@@__IMMUTABLE_ITERABLE__@@" => false,
+                    "@@__IMMUTABLE_RECORD__@@" => false,
+                    "_isMockFunction" => false,
+                    "toJSON" => false,
+                  },
+                  "proxy": [Circular],
+                  "target": Object {
+                    "name": "rock",
+                    "winsAgainst": Array [
+                      "scissors",
+                    ],
+                    Symbol(mobx administration): [Circular],
+                  },
+                  "values": Map {
+                    "name" => "rock",
+                    "winsAgainst" => Array [
+                      "scissors",
+                    ],
+                  },
+                },
+              },
+              Object {
+                "name": "scissors",
+                "winsAgainst": Array [
+                  "paper",
+                ],
+                Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                  "defaultEnhancer": [Function],
+                  "keysAtom": Atom$$1 {
+                    "diffValue": 0,
+                    "isBeingObserved": false,
+                    "isPendingUnobservation": false,
+                    "lastAccessedBy": 0,
+                    "lowestObserverState": 2,
+                    "name": "ObservableObject@1.weapons[..].keys",
+                    "observers": Set {},
+                  },
+                  "name": "ObservableObject@1.weapons[..]",
+                  "pendingKeys": Map {
+                    "$$typeof" => false,
+                    "nodeType" => false,
+                    "@@__IMMUTABLE_ITERABLE__@@" => false,
+                    "@@__IMMUTABLE_RECORD__@@" => false,
+                    "_isMockFunction" => false,
+                    "toJSON" => false,
+                  },
+                  "proxy": [Circular],
+                  "target": Object {
+                    "name": "scissors",
+                    "winsAgainst": Array [
+                      "paper",
+                    ],
+                    Symbol(mobx administration): [Circular],
+                  },
+                  "values": Map {
+                    "name" => "scissors",
+                    "winsAgainst" => Array [
+                      "paper",
+                    ],
+                  },
+                },
+              },
+              Object {
+                "name": "paper",
+                "winsAgainst": Array [
+                  "rock",
+                ],
+                Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                  "defaultEnhancer": [Function],
+                  "keysAtom": Atom$$1 {
+                    "diffValue": 0,
+                    "isBeingObserved": false,
+                    "isPendingUnobservation": false,
+                    "lastAccessedBy": 0,
+                    "lowestObserverState": 2,
+                    "name": "ObservableObject@1.weapons[..].keys",
+                    "observers": Set {},
+                  },
+                  "name": "ObservableObject@1.weapons[..]",
+                  "pendingKeys": Map {
+                    "$$typeof" => false,
+                    "nodeType" => false,
+                    "@@__IMMUTABLE_ITERABLE__@@" => false,
+                    "@@__IMMUTABLE_RECORD__@@" => false,
+                    "_isMockFunction" => false,
+                    "toJSON" => false,
+                  },
+                  "proxy": [Circular],
+                  "target": Object {
+                    "name": "paper",
+                    "winsAgainst": Array [
+                      "rock",
+                    ],
+                    Symbol(mobx administration): [Circular],
+                  },
+                  "values": Map {
+                    "name" => "paper",
+                    "winsAgainst" => Array [
+                      "rock",
+                    ],
+                  },
+                },
+              },
+            ],
+            "setPlayerWeapon" => [MockFunction],
+          },
+        },
+      },
+    },
+    "ref": [Function],
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "store": Object {
+          "playersNames": Array [
+            "player1",
+            "player2",
+          ],
+          "setPlayerWeapon": [MockFunction],
+          "weapons": Array [
+            Object {
+              "name": "rock",
+              "winsAgainst": Array [
+                "scissors",
+              ],
+              Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                "defaultEnhancer": [Function],
+                "keysAtom": Atom$$1 {
+                  "diffValue": 0,
+                  "isBeingObserved": false,
+                  "isPendingUnobservation": false,
+                  "lastAccessedBy": 0,
+                  "lowestObserverState": 2,
+                  "name": "ObservableObject@1.weapons[..].keys",
+                  "observers": Set {},
+                },
+                "name": "ObservableObject@1.weapons[..]",
+                "pendingKeys": Map {
+                  "$$typeof" => false,
+                  "nodeType" => false,
+                  "@@__IMMUTABLE_ITERABLE__@@" => false,
+                  "@@__IMMUTABLE_RECORD__@@" => false,
+                  "_isMockFunction" => false,
+                  "toJSON" => false,
+                },
+                "proxy": [Circular],
+                "target": Object {
+                  "name": "rock",
+                  "winsAgainst": Array [
+                    "scissors",
+                  ],
+                  Symbol(mobx administration): [Circular],
+                },
+                "values": Map {
+                  "name" => "rock",
+                  "winsAgainst" => Array [
+                    "scissors",
+                  ],
+                },
+              },
+            },
+            Object {
+              "name": "scissors",
+              "winsAgainst": Array [
+                "paper",
+              ],
+              Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                "defaultEnhancer": [Function],
+                "keysAtom": Atom$$1 {
+                  "diffValue": 0,
+                  "isBeingObserved": false,
+                  "isPendingUnobservation": false,
+                  "lastAccessedBy": 0,
+                  "lowestObserverState": 2,
+                  "name": "ObservableObject@1.weapons[..].keys",
+                  "observers": Set {},
+                },
+                "name": "ObservableObject@1.weapons[..]",
+                "pendingKeys": Map {
+                  "$$typeof" => false,
+                  "nodeType" => false,
+                  "@@__IMMUTABLE_ITERABLE__@@" => false,
+                  "@@__IMMUTABLE_RECORD__@@" => false,
+                  "_isMockFunction" => false,
+                  "toJSON" => false,
+                },
+                "proxy": [Circular],
+                "target": Object {
+                  "name": "scissors",
+                  "winsAgainst": Array [
+                    "paper",
+                  ],
+                  Symbol(mobx administration): [Circular],
+                },
+                "values": Map {
+                  "name" => "scissors",
+                  "winsAgainst" => Array [
+                    "paper",
+                  ],
+                },
+              },
+            },
+            Object {
+              "name": "paper",
+              "winsAgainst": Array [
+                "rock",
+              ],
+              Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                "defaultEnhancer": [Function],
+                "keysAtom": Atom$$1 {
+                  "diffValue": 0,
+                  "isBeingObserved": false,
+                  "isPendingUnobservation": false,
+                  "lastAccessedBy": 0,
+                  "lowestObserverState": 2,
+                  "name": "ObservableObject@1.weapons[..].keys",
+                  "observers": Set {},
+                },
+                "name": "ObservableObject@1.weapons[..]",
+                "pendingKeys": Map {
+                  "$$typeof" => false,
+                  "nodeType" => false,
+                  "@@__IMMUTABLE_ITERABLE__@@" => false,
+                  "@@__IMMUTABLE_RECORD__@@" => false,
+                  "_isMockFunction" => false,
+                  "toJSON" => false,
+                },
+                "proxy": [Circular],
+                "target": Object {
+                  "name": "paper",
+                  "winsAgainst": Array [
+                    "rock",
+                  ],
+                  Symbol(mobx administration): [Circular],
+                },
+                "values": Map {
+                  "name" => "paper",
+                  "winsAgainst" => Array [
+                    "rock",
+                  ],
+                },
+              },
+            },
+          ],
+          Symbol(mobx administration): ObservableObjectAdministration$$1 {
+            "defaultEnhancer": [Function],
+            "keysAtom": Atom$$1 {
+              "diffValue": 0,
+              "isBeingObserved": false,
+              "isPendingUnobservation": false,
+              "lastAccessedBy": 0,
+              "lowestObserverState": 2,
+              "name": "ObservableObject@1.keys",
+              "observers": Set {},
+            },
+            "name": "ObservableObject@1",
+            "pendingKeys": Map {
+              "$$typeof" => false,
+              "nodeType" => false,
+              "@@__IMMUTABLE_ITERABLE__@@" => false,
+              "@@__IMMUTABLE_RECORD__@@" => false,
+              "_isMockFunction" => false,
+              "toJSON" => false,
+            },
+            "proxy": [Circular],
+            "target": Object {
+              "playersNames": Array [
+                "player1",
+                "player2",
+              ],
+              "setPlayerWeapon": [MockFunction],
+              "weapons": Array [
+                Object {
+                  "name": "rock",
+                  "winsAgainst": Array [
+                    "scissors",
+                  ],
+                  Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                    "defaultEnhancer": [Function],
+                    "keysAtom": Atom$$1 {
+                      "diffValue": 0,
+                      "isBeingObserved": false,
+                      "isPendingUnobservation": false,
+                      "lastAccessedBy": 0,
+                      "lowestObserverState": 2,
+                      "name": "ObservableObject@1.weapons[..].keys",
+                      "observers": Set {},
+                    },
+                    "name": "ObservableObject@1.weapons[..]",
+                    "pendingKeys": Map {
+                      "$$typeof" => false,
+                      "nodeType" => false,
+                      "@@__IMMUTABLE_ITERABLE__@@" => false,
+                      "@@__IMMUTABLE_RECORD__@@" => false,
+                      "_isMockFunction" => false,
+                      "toJSON" => false,
+                    },
+                    "proxy": [Circular],
+                    "target": Object {
+                      "name": "rock",
+                      "winsAgainst": Array [
+                        "scissors",
+                      ],
+                      Symbol(mobx administration): [Circular],
+                    },
+                    "values": Map {
+                      "name" => "rock",
+                      "winsAgainst" => Array [
+                        "scissors",
+                      ],
+                    },
+                  },
+                },
+                Object {
+                  "name": "scissors",
+                  "winsAgainst": Array [
+                    "paper",
+                  ],
+                  Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                    "defaultEnhancer": [Function],
+                    "keysAtom": Atom$$1 {
+                      "diffValue": 0,
+                      "isBeingObserved": false,
+                      "isPendingUnobservation": false,
+                      "lastAccessedBy": 0,
+                      "lowestObserverState": 2,
+                      "name": "ObservableObject@1.weapons[..].keys",
+                      "observers": Set {},
+                    },
+                    "name": "ObservableObject@1.weapons[..]",
+                    "pendingKeys": Map {
+                      "$$typeof" => false,
+                      "nodeType" => false,
+                      "@@__IMMUTABLE_ITERABLE__@@" => false,
+                      "@@__IMMUTABLE_RECORD__@@" => false,
+                      "_isMockFunction" => false,
+                      "toJSON" => false,
+                    },
+                    "proxy": [Circular],
+                    "target": Object {
+                      "name": "scissors",
+                      "winsAgainst": Array [
+                        "paper",
+                      ],
+                      Symbol(mobx administration): [Circular],
+                    },
+                    "values": Map {
+                      "name" => "scissors",
+                      "winsAgainst" => Array [
+                        "paper",
+                      ],
+                    },
+                  },
+                },
+                Object {
+                  "name": "paper",
+                  "winsAgainst": Array [
+                    "rock",
+                  ],
+                  Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                    "defaultEnhancer": [Function],
+                    "keysAtom": Atom$$1 {
+                      "diffValue": 0,
+                      "isBeingObserved": false,
+                      "isPendingUnobservation": false,
+                      "lastAccessedBy": 0,
+                      "lowestObserverState": 2,
+                      "name": "ObservableObject@1.weapons[..].keys",
+                      "observers": Set {},
+                    },
+                    "name": "ObservableObject@1.weapons[..]",
+                    "pendingKeys": Map {
+                      "$$typeof" => false,
+                      "nodeType" => false,
+                      "@@__IMMUTABLE_ITERABLE__@@" => false,
+                      "@@__IMMUTABLE_RECORD__@@" => false,
+                      "_isMockFunction" => false,
+                      "toJSON" => false,
+                    },
+                    "proxy": [Circular],
+                    "target": Object {
+                      "name": "paper",
+                      "winsAgainst": Array [
+                        "rock",
+                      ],
+                      Symbol(mobx administration): [Circular],
+                    },
+                    "values": Map {
+                      "name" => "paper",
+                      "winsAgainst" => Array [
+                        "rock",
+                      ],
+                    },
+                  },
+                },
+              ],
+              Symbol(mobx administration): [Circular],
+            },
+            "values": Map {
+              "playersNames" => Array [
+                "player1",
+                "player2",
+              ],
+              "weapons" => Array [
+                Object {
+                  "name": "rock",
+                  "winsAgainst": Array [
+                    "scissors",
+                  ],
+                  Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                    "defaultEnhancer": [Function],
+                    "keysAtom": Atom$$1 {
+                      "diffValue": 0,
+                      "isBeingObserved": false,
+                      "isPendingUnobservation": false,
+                      "lastAccessedBy": 0,
+                      "lowestObserverState": 2,
+                      "name": "ObservableObject@1.weapons[..].keys",
+                      "observers": Set {},
+                    },
+                    "name": "ObservableObject@1.weapons[..]",
+                    "pendingKeys": Map {
+                      "$$typeof" => false,
+                      "nodeType" => false,
+                      "@@__IMMUTABLE_ITERABLE__@@" => false,
+                      "@@__IMMUTABLE_RECORD__@@" => false,
+                      "_isMockFunction" => false,
+                      "toJSON" => false,
+                    },
+                    "proxy": [Circular],
+                    "target": Object {
+                      "name": "rock",
+                      "winsAgainst": Array [
+                        "scissors",
+                      ],
+                      Symbol(mobx administration): [Circular],
+                    },
+                    "values": Map {
+                      "name" => "rock",
+                      "winsAgainst" => Array [
+                        "scissors",
+                      ],
+                    },
+                  },
+                },
+                Object {
+                  "name": "scissors",
+                  "winsAgainst": Array [
+                    "paper",
+                  ],
+                  Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                    "defaultEnhancer": [Function],
+                    "keysAtom": Atom$$1 {
+                      "diffValue": 0,
+                      "isBeingObserved": false,
+                      "isPendingUnobservation": false,
+                      "lastAccessedBy": 0,
+                      "lowestObserverState": 2,
+                      "name": "ObservableObject@1.weapons[..].keys",
+                      "observers": Set {},
+                    },
+                    "name": "ObservableObject@1.weapons[..]",
+                    "pendingKeys": Map {
+                      "$$typeof" => false,
+                      "nodeType" => false,
+                      "@@__IMMUTABLE_ITERABLE__@@" => false,
+                      "@@__IMMUTABLE_RECORD__@@" => false,
+                      "_isMockFunction" => false,
+                      "toJSON" => false,
+                    },
+                    "proxy": [Circular],
+                    "target": Object {
+                      "name": "scissors",
+                      "winsAgainst": Array [
+                        "paper",
+                      ],
+                      Symbol(mobx administration): [Circular],
+                    },
+                    "values": Map {
+                      "name" => "scissors",
+                      "winsAgainst" => Array [
+                        "paper",
+                      ],
+                    },
+                  },
+                },
+                Object {
+                  "name": "paper",
+                  "winsAgainst": Array [
+                    "rock",
+                  ],
+                  Symbol(mobx administration): ObservableObjectAdministration$$1 {
+                    "defaultEnhancer": [Function],
+                    "keysAtom": Atom$$1 {
+                      "diffValue": 0,
+                      "isBeingObserved": false,
+                      "isPendingUnobservation": false,
+                      "lastAccessedBy": 0,
+                      "lowestObserverState": 2,
+                      "name": "ObservableObject@1.weapons[..].keys",
+                      "observers": Set {},
+                    },
+                    "name": "ObservableObject@1.weapons[..]",
+                    "pendingKeys": Map {
+                      "$$typeof" => false,
+                      "nodeType" => false,
+                      "@@__IMMUTABLE_ITERABLE__@@" => false,
+                      "@@__IMMUTABLE_RECORD__@@" => false,
+                      "_isMockFunction" => false,
+                      "toJSON" => false,
+                    },
+                    "proxy": [Circular],
+                    "target": Object {
+                      "name": "paper",
+                      "winsAgainst": Array [
+                        "rock",
+                      ],
+                      Symbol(mobx administration): [Circular],
+                    },
+                    "values": Map {
+                      "name" => "paper",
+                      "winsAgainst" => Array [
+                        "rock",
+                      ],
+                    },
+                  },
+                },
+              ],
+              "setPlayerWeapon" => [MockFunction],
+            },
+          },
+        },
+      },
+      "ref": [Function],
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

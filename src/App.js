@@ -3,6 +3,7 @@ import { Provider } from "mobx-react";
 import logo from "./logo.svg";
 import "./App.css";
 import Store from "./store";
+import WeaponsList from "./components/weaponsList";
 
 const store = new Store();
 
@@ -24,6 +25,7 @@ class App extends Component {
             >
               Learn React
             </a>
+            <WeaponsList></WeaponsList>
           </header>
         </div>
       </Provider>
