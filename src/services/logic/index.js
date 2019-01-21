@@ -1,9 +1,7 @@
-import weapons from "../weapons";
+const playsMissingError = new Error("getWinner must receive 2 plays and the players' names");
 
-const playsMissingError = new Error("getWinner must receive 2 plays");
-
-export function getWinner(plays) {
-    if (!plays || plays.length !== 2 || !weapons.includes(plays[0]) || !weapons.includes(plays[1])) {
+export function getWinner(plays, playersNames) {
+    if (!plays || plays.length !== 2 || !playersNames || playersNames.length !== 2) {
         throw playsMissingError;
     }
 
@@ -14,8 +12,8 @@ export function getWinner(plays) {
     if (player1Weapon === player2Weapon) {
         return null
     } else if (player1.winsAgainst.includes(player2Weapon)) {
-        return player1;
+        return playersNames[0];
     } else if (player2.winsAgainst.includes(player1Weapon)) {
-        return player2;
+        return playersNames[1];
     }
 };
