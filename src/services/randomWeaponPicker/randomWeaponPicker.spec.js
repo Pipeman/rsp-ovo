@@ -12,7 +12,7 @@ describe("randomPicker", () => {
     });
 
     it("should return a weapon", () => {
-        const randomWeapon = randomWeaponPicker();
+        const randomWeapon = randomWeaponPicker(weapons);
         expect(weapons.includes(randomWeapon)).toBe(true);
     });
 });

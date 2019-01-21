@@ -2,8 +2,10 @@ import { configure } from "mobx";
 import Store from ".";
 import weapons from "../services/weapons";
 import { getWinner } from "../services/logic";
+import { randomWeaponPicker } from "../services/randomWeaponPicker";
 
 jest.mock("../services/logic");
+jest.mock("../services/randomWeaponPicker");
 
 describe("store", () => {
     let store;
@@ -19,22 +21,106 @@ describe("store", () => {
         expect(store).toBeDefined();
     });
 
-    describe("resetScore", () => {
+    describe("initialisePlay", () => {
+
+        beforeEach(() => {
+            store.setPlayerWeapon = jest.fn();
+            store.setCurrentGameWinner = jest.fn();
+        });
+
+        afterEach(() => {
+            store.setPlayerWeapon.mockReset();
+        });
 
         it("should be defined", () => {
-            expect(store.resetScore).toBeDefined();
+            expect(store.initialisePlay).toBeDefined();
         });
 
         it("should be a method", () => {
-            expect(store.resetScore).toBeInstanceOf(Function);
+            expect(store.initialisePlay).toBeInstanceOf(Function);
         });
 
-        it("should set the scores to 0", () => {
-            store.score[store.playersNames[0]] = 10;
-            store.score[store.playersNames[1]] = 99;
-            store.resetScore();
-            expect(store.score[store.playersNames[0]]).toBe(0);
-            expect(store.score[store.playersNames[1]]).toBe(0);
+        it("should set the two players weapons", () => {
+            store.initialisePlay("you", weapons[1]);
+            expect(store.setPlayerWeapon).toHaveBeenCalledTimes(2);
+            expect(store.setPlayerWeapon).toHaveBeenCalledWith("you", weapons[1]);
+        });
+
+        it("should set the current game winner", () => {
+            store.initialisePlay("you", weapons[1]);
+            expect(store.setCurrentGameWinner).toHaveBeenCalledTimes(1);
+        });
+    });
+
+    describe("randomWeapon", () => {
+
+        beforeEach(() => {
+            randomWeaponPicker.mockReturnValue(weapons[2]);
+        });
+
+        afterEach(() => {
+            randomWeaponPicker.mockReset();
+        });
+
+        it("should be defined", () => {
+            expect(store.randomWeapon).toBeDefined();
+        });
+
+        it("should be a getter", () => {
+            expect(() => { store.randomWeapon = {}; }).toThrow();
+        });
+
+        it("should call the random weapon picker", () => {
+            // eslint-disable-next-line no-unused-expressions
+            store.randomWeapon;
+            expect(randomWeaponPicker).toHaveBeenCalledTimes(1);
+            expect(randomWeaponPicker).toHaveBeenCalledWith(store.weapons);
+        });
+
+        it("should return the result of random weapon picker", () => {           
+            expect(store.randomWeapon).toBe(weapons[2]);
+        });
+    });
+
+    describe("setCurrentGameWinner", () => {
+
+        beforeEach(() => {
+            store.updateScoreForPlayer = jest.fn(store.updateScoreForPlayer);
+            getWinner.mockReturnValue("you");
+        });
+
+        afterEach(() => {
+            getWinner.mockReset();
+        });
+
+        it("should be defined", () => {
+            expect(store.setCurrentGameWinner).toBeDefined();
+        });
+
+        it("should be a method", () => {
+            expect(store.setCurrentGameWinner).toBeInstanceOf(Function);
+        });
+
+        it("should call the getWinner service", () => {
+            store.currentGame.you = weapons[0];
+            store.currentGame.cpu = weapons[2];
+            store.setCurrentGameWinner();
+            expect(getWinner).toHaveBeenCalledTimes(1);
+            expect(getWinner).toHaveBeenCalledWith([store.currentGame.you, store.currentGame.cpu], store.playersNames);
+        });
+
+        it("should update the score", () => {
+            store.setCurrentGameWinner([weapons[0], weapons[2]]);
+            expect(store.updateScoreForPlayer).toHaveBeenCalledTimes(1);
+            expect(store.updateScoreForPlayer).toHaveBeenCalledWith("you");
+        });
+
+        it("should update the score accordingly to the winner", () => {
+            const [rock, scissors] = weapons;
+            const rockVsScissors = [rock, scissors];
+            store.setCurrentGameWinner(rockVsScissors)
+            expect(store.score.you).toBe(1);
+            expect(store.score.cpu).toBe(0);
         });
     });
 
@@ -52,20 +138,20 @@ describe("store", () => {
             const errorMessage = "setPlayerWeapon requires a player and a weapon";
             expect(() => store.setPlayerWeapon()).toThrow(errorMessage);
             expect(() => store.setPlayerWeapon("")).toThrow(errorMessage);
-            expect(() => store.setPlayerWeapon("player1")).toThrow(errorMessage);
-            expect(() => store.setPlayerWeapon("player1", null)).toThrow(errorMessage);
-            expect(() => store.setPlayerWeapon("player1", {})).toThrow(errorMessage);
+            expect(() => store.setPlayerWeapon("you")).toThrow(errorMessage);
+            expect(() => store.setPlayerWeapon("you", null)).toThrow(errorMessage);
+            expect(() => store.setPlayerWeapon("you", {})).toThrow(errorMessage);
         });
 
         it("should accept a string and a weapon", () => {
-            expect(() => store.setPlayerWeapon("player1", weapons[1])).not.toThrow();
+            expect(() => store.setPlayerWeapon("cpu", weapons[1])).not.toThrow();
         });
 
         it("should store the players weapon in the Store", () => {
-            store.setPlayerWeapon("player1", weapons[1]);
-            expect(store.currentGame.player1).toEqual(weapons[1]);
-            store.setPlayerWeapon("player2", weapons[1]);
-            expect(store.currentGame.player2).toEqual(weapons[1]);
+            store.setPlayerWeapon("you", weapons[1]);
+            expect(store.currentGame.you).toEqual(weapons[1]);
+            store.setPlayerWeapon("cpu", weapons[1]);
+            expect(store.currentGame.cpu).toEqual(weapons[1]);
         });
     });
 
@@ -88,68 +174,14 @@ describe("store", () => {
         });
 
         it("should not throw when receiving a players name", () => {
-            expect(() => store.updateScoreForPlayer("player1")).not.toThrow();
+            expect(() => store.updateScoreForPlayer("you")).not.toThrow();
         });
 
         it("should add 1 to the score of the player passed as attribute", () => {
-            store.updateScoreForPlayer("player1");
-            expect(store.score.player1).toBe(1);
-            store.updateScoreForPlayer("player2");
-            expect(store.score.player2).toBe(1);
-        });
-    });
-
-    describe("setCurrentGameWinner", () => {
-
-        beforeEach(() => {
-            store.updateScoreForPlayer = jest.fn(store.updateScoreForPlayer);
-            getWinner.mockReturnValue("player1");
-        });
-
-        afterEach(() => {
-            getWinner.mockReset();
-        });
-
-        it("should be defined", () => {
-            expect(store.setCurrentGameWinner).toBeDefined();
-        });
-
-        it("should be a method", () => {
-            expect(store.setCurrentGameWinner).toBeInstanceOf(Function);
-        });
-
-        it("should throw if it does not receives an array with 2 plays", () => {
-            const errorMessage = "setCurrentGameWinner requires 2 plays";
-            expect(() => store.setCurrentGameWinner()).toThrowError(errorMessage);
-            expect(() => store.setCurrentGameWinner([])).toThrowError(errorMessage);
-            expect(() => store.setCurrentGameWinner([{}])).toThrowError(errorMessage);
-            expect(() => store.setCurrentGameWinner([{}, {}])).toThrowError(errorMessage);
-            expect(() => store.setCurrentGameWinner([{}, {}, {}])).toThrowError(errorMessage);
-        });
-
-        it("should not throw when receiving an array with 2 plays", () => {
-            expect(() => store.setCurrentGameWinner([weapons[0], weapons[2]])).not.toThrow();
-        });
-
-        it("should call the getWinner service", () => {
-            const plays = [weapons[0], weapons[2]];
-            store.setCurrentGameWinner(plays);
-            expect(getWinner).toHaveBeenCalledTimes(1);
-            expect(getWinner).toHaveBeenCalledWith(plays, store.playersNames);
-        });
-
-        it("should update the score", () => {
-            store.setCurrentGameWinner([weapons[0], weapons[2]]);
-            expect(store.updateScoreForPlayer).toHaveBeenCalledTimes(1);
-            expect(store.updateScoreForPlayer).toHaveBeenCalledWith("player1");
-        });
-
-        it("should update the score accordingly to the winner", () => {
-            const [rock, scissors] = weapons;
-            const rockVsScissors = [rock, scissors];
-            store.setCurrentGameWinner(rockVsScissors)
-            expect(store.score.player1).toBe(1);
-            expect(store.score.player2).toBe(0);
+            store.updateScoreForPlayer("you");
+            expect(store.score.you).toBe(1);
+            store.updateScoreForPlayer("cpu");
+            expect(store.score.cpu).toBe(1);
         });
     });
 });

@@ -1,7 +1,5 @@
-import weapons, { weaponsNumber } from "../weapons";
-
-export function randomWeaponPicker() {
-    const randomInt = getRandomInt(weaponsNumber);
+export function randomWeaponPicker(weapons) {
+    const randomInt = getRandomInt(weapons.length);
 
     return weapons[randomInt];
 };

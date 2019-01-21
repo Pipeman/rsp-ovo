@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Provider } from "mobx-react";
-import logo from "./logo.svg";
 import "./App.css";
 import Store from "./store";
 import WeaponsList from "./components/weaponsList";
+import ChosenWeapons from "./components/chosenWeapons";
+import Scores from "./components/scores";
 
 const store = new Store();
 
@@ -12,21 +13,9 @@ class App extends Component {
     return (
       <Provider store={store}>
         <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-            <WeaponsList></WeaponsList>
-          </header>
+          <Scores/>
+          <ChosenWeapons/>
+          <WeaponsList></WeaponsList>
         </div>
       </Provider>
     );

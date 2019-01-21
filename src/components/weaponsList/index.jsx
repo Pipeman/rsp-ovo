@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { inject, observer } from "mobx-react";
-import { faHandRock, faHandScissors, faHandPaper } from "@fortawesome/free-solid-svg-icons";
-
+import "./weaponsList.css";
 import Weapon from "../weapon";
 
 class WeaponsList extends Component {
@@ -9,18 +8,12 @@ class WeaponsList extends Component {
     weapons = this.props.store.weapons;
 
     render() {
-        const weaponsIcons = {
-            [this.weapons[0].name]: faHandRock,
-            [this.weapons[1].name]: faHandScissors,
-            [this.weapons[2].name]: faHandPaper,
-        };
-      
         return (
-            <div>
+            <div className="weapons-list">
                 {this.weapons.map((weapon, index) => (
                     <Weapon
-                        icon={weaponsIcons[weapon.name]}
-                        clickAction={() => this.props.store.setPlayerWeapon(this.playerName, weapon)}
+                        icon={weapon.icon}
+                        clickAction={() => this.props.store.initialisePlay(this.playerName, weapon)}
                         key={index}
                     ></Weapon>
                 ))}

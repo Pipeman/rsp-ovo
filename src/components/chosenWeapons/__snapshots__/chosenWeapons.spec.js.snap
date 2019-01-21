@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`WeaponsList should rendered correctly 1`] = `
+exports[`ChosenWeapons should rendered correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <inject-WeaponsList-with-store
+  Symbol(enzyme.__unrendered__): <inject-ChosenWeapons-with-store
     store={
       Object {
         "playersNames": Array [

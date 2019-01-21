@@ -7,7 +7,6 @@ import Weapon from ".";
 
 configure({ adapter: new Adapter() });
 
-
 describe("Weapon", () => {
     let clickAction;
 
