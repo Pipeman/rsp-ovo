@@ -1,0 +1,18 @@
+@import "../../utils/index";
+
+.weapon {
+    flex: 1;
+    height: 10vh;
+    min-height: 50px;
+    font-size: 3em;
+    color: $color-shade-3;
+    border: none;
+    background-color: inherit;
+    max-width: 150px;
+
+    &:focus {
+        color: $color-shade-2;
+        border-bottom: none;
+        outline: none;
+    }
+}

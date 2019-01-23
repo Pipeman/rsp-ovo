@@ -29,6 +29,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "enzyme-adapter-react-16": "^1.7.1"
+    "enzyme-adapter-react-16": "^1.7.1",
+    "node-sass": "^4.11.0"
   }
 }

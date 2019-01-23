@@ -32,9 +32,6 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h2
-          className="chosen-weapon__title"
-        />,
         <FontAwesomeIcon
           border={false}
           className="chosen-weapon__icon"
@@ -65,26 +62,12 @@ ShallowWrapper {
           title=""
           transform={null}
         />,
-        <h3>
-          
-        </h3>,
+        "",
       ],
-      "className": "chosen-weapon",
+      "className": "chosen-weapon ",
     },
     "ref": null,
     "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": undefined,
-          "className": "chosen-weapon__title",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "h2",
-      },
       Object {
         "instance": null,
         "key": undefined,
@@ -121,17 +104,7 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "",
-        },
-        "ref": null,
-        "rendered": "",
-        "type": "h3",
-      },
+      "",
     ],
     "type": "div",
   },
@@ -142,9 +115,6 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h2
-            className="chosen-weapon__title"
-          />,
           <FontAwesomeIcon
             border={false}
             className="chosen-weapon__icon"
@@ -175,26 +145,12 @@ ShallowWrapper {
             title=""
             transform={null}
           />,
-          <h3>
-            
-          </h3>,
+          "",
         ],
-        "className": "chosen-weapon",
+        "className": "chosen-weapon ",
       },
       "ref": null,
       "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": undefined,
-            "className": "chosen-weapon__title",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "h2",
-        },
         Object {
           "instance": null,
           "key": undefined,
@@ -231,17 +187,7 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "",
-          },
-          "ref": null,
-          "rendered": "",
-          "type": "h3",
-        },
+        "",
       ],
       "type": "div",
     },

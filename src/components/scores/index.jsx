@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { inject, observer } from "mobx-react";
 
-import "./scores.css";
+import "./scores.scss";
 import Score from "../score";
 
 class Scores extends Component {
@@ -14,6 +14,7 @@ class Scores extends Component {
                 {this.playersNames.map((name, index) => (
                     <Score
                         score={this.score[name]}
+                        name={name}
                         key={index}
                     ></Score>
                 ))}

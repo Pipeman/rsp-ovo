@@ -1,0 +1,22 @@
+@import "../../utils/index";
+
+.chosen-weapon {
+    flex: 1;
+    color: $color-shade-3;
+
+    &--winner {
+        color: $color-shade-2;
+    }
+
+    &__icon {
+        font-size: 4em;
+
+        @media (min-width: 360px) {
+            font-size: 6em;
+        }
+
+        @media (min-width: 500px) {
+            font-size: 8em;
+        }
+    }
+}

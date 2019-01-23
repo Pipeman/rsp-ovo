@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { inject, observer } from "mobx-react";
-import "./weaponsList.css";
+import "./weaponsList.scss";
 import Weapon from "../weapon";
 
 class WeaponsList extends Component {

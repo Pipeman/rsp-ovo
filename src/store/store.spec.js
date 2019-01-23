@@ -24,8 +24,10 @@ describe("store", () => {
     describe("initialisePlay", () => {
 
         beforeEach(() => {
+            jest.useFakeTimers();
             store.setPlayerWeapon = jest.fn();
             store.setCurrentGameWinner = jest.fn();
+            store.setLoadingStatus = jest.fn();
         });
 
         afterEach(() => {
@@ -40,15 +42,54 @@ describe("store", () => {
             expect(store.initialisePlay).toBeInstanceOf(Function);
         });
 
+        it("should start the game", () => {
+            store.isGameStarted = false;
+            store.initialisePlay("you", weapons[1]);
+            expect(store.isGameStarted).toBe(true);
+        });
+
         it("should set the two players weapons", () => {
             store.initialisePlay("you", weapons[1]);
             expect(store.setPlayerWeapon).toHaveBeenCalledTimes(2);
             expect(store.setPlayerWeapon).toHaveBeenCalledWith("you", weapons[1]);
         });
 
+        it("should add delay the results", () => {
+            store.initialisePlay("you", weapons[1]);
+            expect(setTimeout).toHaveBeenCalledTimes(1);
+        });
+
         it("should set the current game winner", () => {
             store.initialisePlay("you", weapons[1]);
+            jest.runAllTimers();
             expect(store.setCurrentGameWinner).toHaveBeenCalledTimes(1);
+        });
+
+        it("should stop loading", () => {
+            store.initialisePlay("you", weapons[1]);
+            expect(store.setLoadingStatus).toHaveBeenCalledWith(true);
+            jest.runAllTimers();
+            expect(store.setLoadingStatus).toHaveBeenCalledTimes(2);
+            expect(store.setLoadingStatus).toHaveBeenCalledWith(false);
+        });
+    });
+
+    describe("isWeapon", () => {
+
+        it("should be defined", () => {
+            expect(store.isWeapon).toBeDefined();
+        });
+
+        it("should be a method", () => {
+            expect(store.isWeapon).toBeInstanceOf(Function);
+        });
+
+        it("should return false when the attribute is not a weapon", () => {
+            expect(store.isWeapon({ notAweapon: true })).toBe(false);
+        });
+
+        it("should return true when the attribute is a weapon", () => {
+            expect(store.isWeapon({ name: "rock", winsAgainst: ["scissors"] })).toBe(true);
         });
     });
 
@@ -79,6 +120,41 @@ describe("store", () => {
 
         it("should return the result of random weapon picker", () => {           
             expect(store.randomWeapon).toBe(weapons[2]);
+        });
+    });
+   
+    describe("winner", () => {
+
+        it("should be defined", () => {
+            expect(store.winner).toBeDefined();
+        });
+
+        it("should be a getter", () => {
+            expect(() => { store.winner = {}; }).toThrow();
+        });
+
+        it("should return the winner of the current game", () => {
+            store.currentGameWinner = "pablo";
+            expect(store.winner).toBe("pablo");
+            store.currentGameWinner = "anselmo";
+            expect(store.winner).toBe("anselmo");
+        });
+    });
+
+    describe("resetGameWinner", () => {
+
+        it("should be defined", () => {
+            expect(store.resetGameWinner).toBeDefined();
+        });
+
+        it("should be a method", () => {
+            expect(store.resetGameWinner).toBeInstanceOf(Function);
+        });
+
+        it("should reset the current game winner", () => {
+            store.currentGameWinner = "Lupin";
+            store.resetGameWinner();
+            expect(store.currentGameWinner).toBe("");
         });
     });
 
@@ -121,6 +197,28 @@ describe("store", () => {
             store.setCurrentGameWinner(rockVsScissors)
             expect(store.score.you).toBe(1);
             expect(store.score.cpu).toBe(0);
+        });
+    });
+
+    describe("setLoadingStatus", () => {
+
+        it("should be defined", () => {
+            expect(store.setLoadingStatus).toBeDefined();
+        });
+
+        it("should be a method", () => {
+            expect(store.setLoadingStatus).toBeInstanceOf(Function);
+        });
+
+        it("should throw when it does not receive a boolean", () => {
+            expect(() => store.setLoadingStatus("asdwq")).toThrow("setLoadingStatus requires a bolean");
+            expect(() => store.setLoadingStatus()).toThrow("setLoadingStatus requires a bolean");
+        });
+
+        it("set the isLoading value to attribute's value", () => {
+            store.isLoading = false;
+            store.setLoadingStatus(true)
+            expect(store.isLoading).toBe(true);
         });
     });
 

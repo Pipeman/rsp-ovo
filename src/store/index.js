@@ -5,6 +5,7 @@ import { randomWeaponPicker } from "../services/randomWeaponPicker";
 
 const noPlayerAndWeaponError = new Error("setPlayerWeapon requires a player and a weapon");
 const invalidScoreFormatError = new Error("setScore requires a player's name");
+const invalidIsLoadingError = new Error("setLoadingStatus requires a bolean");
 
 const playersNamesDefault = ["you", "cpu"];
 
@@ -24,15 +25,23 @@ class Store {
     };
     currentGameWinner = "";
     weapons = weapons;
+    isLoading = false;
+    isGameStarted = false;
 
     initialisePlay(player, weapon) {
+        this.isGameStarted = true;
+        this.setLoadingStatus(true);
+
         this.resetGameWinner();
         this.setPlayerWeapon(player, weapon);
 
         const otherPlayer = this.playersNames.find(name => name !== player);
         this.setPlayerWeapon(otherPlayer, this.randomWeapon);
-        
-        this.setCurrentGameWinner(this.currentGame);
+
+        setTimeout(() => {
+            this.setCurrentGameWinner(this.currentGame);
+            this.setLoadingStatus(false);
+        }, 1000);
     }
     get randomWeapon() {
         return randomWeaponPicker(this.weapons);
@@ -73,6 +82,12 @@ class Store {
             return isNameEqual && isWinsAgainstEqual;
         });
     }
+    setLoadingStatus(isLoading) {
+        if (typeof isLoading !== "boolean") {
+            throw invalidIsLoadingError;
+        }
+        this.isLoading = isLoading;
+    }
 }
 
 decorate(Store, {
@@ -81,6 +96,8 @@ decorate(Store, {
     currentGame: observable,
     currentGameWinner: observable,
     weapons: observable,
+    isLoading: observable,
+    isGameStarted: observable,
     randomWeapon: computed,
     resetGameWinner: action,
     initialisePlay: action,
@@ -88,6 +105,7 @@ decorate(Store, {
     setPlayerWeapon: action,
     updateScoreForPlayer: action,
     setCurrentGameWinner: action,
+    setLoadingStatus: action,
 });
 
 export default Store;
