@@ -38,6 +38,34 @@ fdescribe("getWinner", () => {
         expect(getWinner([weapons[2], weapons[2]], ["weapons", "shields"])).toBeNull();
     });
 
+    describe("when scissors are selected", () => {
+
+        it("should beat paper and lizard", () => {
+            const scissors = weapons[1];
+            const paper = weapons[2];
+            const lizard = weapons[3];
+            const playersNames = ["player1", "player2"];
+            const scissorsVsPaper = [scissors, paper];
+            expect(getWinner(scissorsVsPaper, playersNames)).toBe(playersNames[0]);
+            const scissorsVsLizard = [scissors, lizard];
+            expect(getWinner(scissorsVsLizard, playersNames)).toBe(playersNames[0]);
+        });
+    });
+
+    describe("when spock is selected", () => {
+
+        it("should beat rock and scissors", () => {
+            const rock = weapons[0];
+            const scissors = weapons[1];
+            const spock = weapons[4];
+            const playersNames = ["player1", "player2"];
+            const spockVsScissors = [spock, scissors];
+            expect(getWinner(spockVsScissors, playersNames)).toBe(playersNames[0]);
+            const spockVsRock = [spock, rock];
+            expect(getWinner(spockVsRock, playersNames)).toBe(playersNames[0]);
+        });
+    });
+
     it("should return the winner between the 2 plays", () => {
         const [rock, scissors, paper] = weapons;
         const playersNames = ["player1", "player2"];

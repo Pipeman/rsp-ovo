@@ -89,7 +89,7 @@ describe("store", () => {
         });
 
         it("should return true when the attribute is a weapon", () => {
-            expect(store.isWeapon({ name: "rock", winsAgainst: ["scissors"] })).toBe(true);
+            expect(store.isWeapon({ name: "rock", winsAgainst: ["scissors", "lizard"] })).toBe(true);
         });
     });
 

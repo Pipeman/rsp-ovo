@@ -5,7 +5,7 @@
 * At the moment the deployed version is the development one, which is definitely not ideal
 
 # TODO
-* getWinner service ca be enhanced to accept both an array or 2 different attributes
+* getWinner service can be enhanced to accept both an array or 2 different attribtes
 * let the user set the names of the players. The current store structure already allows this, but there is no action defined to do so
 * add a history of the ongoing match plays
 * write more tests

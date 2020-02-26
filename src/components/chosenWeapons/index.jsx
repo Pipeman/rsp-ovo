@@ -23,7 +23,7 @@ class ChosenWeapons extends Component {
                 </div>;
     }
 
-    render() {
+   render() {
         return this.props.store.isLoading
             ? <h4>Rock... Scissors... Paper...</h4>
             : <div className="chosen-weapons">
